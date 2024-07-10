@@ -1,0 +1,19 @@
+{
+  "name": "fastify-template",
+  "version": "1.0.0",
+  "description": "fastify template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts"
+  },
+  "author": "raselldev",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "@types/node": "^20.14.10",
+    "fastify": "^4.28.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}
