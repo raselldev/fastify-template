@@ -1,18 +1,16 @@
-import Fastify from "fastify";
+import buildServer from "./server";
 
-const server = Fastify()
+const server = buildServer();
 
 async function main() {
     try {
-        server.listen({ port: 8080 }, (err, address) => {
-            if (err) {
-                console.error(err);
-                process.exit(1);
-            }
-            console.log(`Server listening at ${address}`);
-        })
+        await server.listen(3000, "0.0.0.0");
+
+        console.log(`Server ready at http://localhost:3000`);
+    } catch (e) {
+        console.error(e);
+        process.exit(1);
     }
-    catch (e) { }
 }
 
-main()
+main();
