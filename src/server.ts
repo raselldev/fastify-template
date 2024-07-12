@@ -6,7 +6,6 @@ import userRoutes from "./modules/user/user.route";
 import productRoutes from "./modules/product/product.route";
 import { userSchemas } from "./modules/user/user.schema";
 import { productSchemas } from "./modules/product/product.schema";
-import { version } from "../package.json";
 
 declare module "fastify" {
   interface FastifyRequest {
@@ -68,7 +67,6 @@ function buildServer() {
         info: {
           title: "Fastify API",
           description: "API for some products",
-          version,
         },
       },
     })
